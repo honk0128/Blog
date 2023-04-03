@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML5, CSS3, Javascript, Web design, 웹디자인"
+    />
+    <meta name="description" content="멋진 웹서비스를 구현합니다." />
+    <meta name="author" content="Byoungcheon Lee, 이병천" />
+    <title>웹프로그래밍 - 홈</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+  </head>
+
+  <body>
+    <script>
+      var Target = document.getElementById('clock');
+      var Target_apm = document.getElementById('apm');
+      function clock() {
+        var time = new Date();
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var AmPm = 'AM';
+        if (hours > 12) {
+          var AmPm = 'PM';
+          hours %= 12;
+        }
+
+        Target.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+          minutes < 10 ? `0${minutes}` : minutes
+        }:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        Target_apm.innerText = `${AmPm}`;
+      }
+      clock();
+      setInterval(clock, 1000); // 1초마다 실행
+    </script>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">웹</span>프로그래밍</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li class="current"><a href="#boxes">Ability</a></li>
+            <li class="current"><a href="#project">Project</a></li>
+            <li class="current"><a href="#boxes">Ability</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+        <h1>웹 프로그래밍</h1>
+        <h2>Web Design & Web Programming</h2>
+        <p>HTML5, CSS3, Javascript, Bootstrap, JavaScript, Python</p>
+      </div>
+
+      <div>
+        <span id="clock" style="color: orange; font-size: 60px">clock</span>
+        <span id="apm" style="color: orange; font-size: 45px">ampm</span>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>뉴스레터 구독 신청</h1>
+        <form>
+          <input type="email" placeholder="Enter your email..." />
+          <button type="submit" class="button_1">구독신청</button>
+        </form>
+      </div>
+    </section>
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="./img/logo_html.png" />
+          <h3>HTML5 Markup</h3>
+          <p>
+            Hypertext Markup Language is the standard markup language for
+            documents designed to be displayed in a web browser. It can be
+            assisted by technologies such as Cascading Style Sheets and
+            scripting languages such as JavaScript.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="./img/logo_css.png" />
+          <h3>CSS3 Styleing</h3>
+          <p>
+            Cascading Style Sheets is a style sheet language used for describing
+            the presentation of a document written in a markup language such as
+            HTML. CSS is a cornerstone technology of the World Wide Web,
+            alongside HTML and JavaScript.
+          </p>
+        </div>
+        <div class="box">
+          <img src="./img/js.png" />
+          <h3>JavaScript</h3>
+          <p>
+            JavaScript often abbreviated as JS, is a programming language that
+            is one of the core technologies of the World Wide Web, alongside
+            HTML and CSS. As of 2022, 98% of websites use JavaScript on the
+            client side for webpage behavior, often incorporating third-party
+            libraries. All major web browsers have a dedicated JavaScript engine
+            to execute the code on users' devices.
+          </p>
+        </div>
+        <div class="box">
+          <img src="./img/python.png" />
+          <h3>Python</h3>
+          <p>
+            Python is a high level general-purpose programming language. It uses
+            a multi-paradigm approach, meaning it supports procedural,
+            object-oriented, and some functional programming constructs. It was
+            created by Guido van Rossum as a successor to another language
+            (called ABC) between 1985 and 1990, and is currently used on a large
+            array of domains like web development, desktop applications, data
+            science, DevOps, and automation/productivity. Python is developed
+            under an OSI-approved open source license, making it freely usable
+            and distributable, even for commercial use. Python's license is
+            administered by the Python Software Foundation.
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="./img/mysql.png" />
+          <h3>MySQL</h3>
+          <p>
+            MySQL is an open-source relational database management system
+            (RDBMS).[5][6] Its name is a combination of "My", the name of
+            co-founder Michael Widenius's daughter My,[7] and "SQL", the acronym
+            for Structured Query Language. A relational database organizes data
+            into one or more data tables in which data may be related to each
+            other; these relations help structure the data. SQL is a language
+            programmers use to create, modify and extract data from the
+            relational database, as well as control user access to the database.
+            In addition to relational databases and SQL, an RDBMS like MySQL
+            works with an operating system to implement a relational database in
+            a computer's storage system, manages users, allows for network
+            access and facilitates testing database integrity and creation of
+            backups.
+          </p>
+        </div>
+        <div class="box">
+          <img src="./img/nextjs.png" />
+          <h3>Next.js</h3>
+          <p>
+            Next.js is an open-source web development framework created by the
+            private company Vercel providing React-based web applications with
+            server-side rendering and static website generation. React
+            documentation mentions Next.js among "Recommended Toolchains"
+            advising it to developers when "building a server-rendered website
+            with Node.js".[5] Where traditional React apps can only render their
+            content in the client-side browser, Next.js extends this
+            functionality to include applications rendered on the server-side.
+            The copyright and trademarks for Next.js are owned by Vercel,[6]
+            which also maintains and leads its open-source development.[7]
+          </p>
+        </div>
+      </div>
+    </section>
+    <div id="project">
+      <div class="container">
+        <h1>Projects</h1>
+        <div class="band">
+          <div class="item-1">
+            <a
+              href="https://github.com/honk0128/Time-Course"
+              class="card"
+              target="_blank"
+            >
+              <div
+                class="thumb"
+                style="background-image: url(./img/project1.png)"
+              ></div>
+              <article>
+                <h1>TimeCourse</h1>
+                <p>중부대학교 수강신청 리뉴얼 사이트 입니다.</p>
+                <span>Node.js / MySQL</span>
+              </article>
+            </a>
+          </div>
+
+          <div class="item-1">
+            <a
+              href="https://github.com/honk0128/To-do-list"
+              class="card"
+              target="_blank"
+            >
+              <div
+                class="thumb"
+                style="background-image: url(./img/project2.png)"
+              ></div>
+              <article>
+                <h1>To Do List</h1>
+                <p>개인 SNS와 1:1 채팅을 이용할 수 있는 스케줄러 입니다.</p>
+                <span>Python / PostgreSQL</span>
+              </article>
+            </a>
+          </div>
+
+          <div class="item-1">
+            <a
+              href="https://nextshop1.vercel.app/"
+              class="card"
+              target="_blank"
+            >
+              <div
+                class="thumb"
+                style="background-image: url(./img/project3.png)"
+              ></div>
+              <article>
+                <h1>개발자들을 위한 워크스페이스</h1>
+                <p>
+                  22년 1학기에 제작한 여러 암호기술을 이용하여 만든 프로젝트
+                  입니다.
+                </p>
+                <span>Python / Mysql / Flask</span>
+              </article>
+            </a>
+          </div>
+
+          <div class="item-1">
+            <a
+              href="https://bicycle-smoky.vercel.app/"
+              class="card"
+              target="_blank"
+            >
+              <div
+                class="thumb"
+                style="background-image: url(./img/project5.png)"
+              ></div>
+              <article>
+                <h1>CycleCS</h1>
+                <p>22년 2학기 웹 시간에 제작한 자전거 추천 사이트 입니다.</p>
+                <span>Next.js / MongoDB</span>
+              </article>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="links">
+      <div class="container">
+        <h1></h1>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023, 중부대학교 정보보호학과 91813298 홍승현</p>
+    </footer>
+    <script>
+      var Target = document.getElementById('clock');
+      var Target_apm = document.getElementById('apm');
+      function clock() {
+        var time = new Date();
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var AmPm = 'AM';
+        if (hours > 12) {
+          var AmPm = 'PM';
+          hours %= 12;
+        }
+
+        Target.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+          minutes < 10 ? `0${minutes}` : minutes
+        }:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        Target_apm.innerText = `${AmPm}`;
+      }
+      clock();
+      setInterval(clock, 1000); // 1초마다 실행
+    </script>
+  </body>
+</html>

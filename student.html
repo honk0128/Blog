@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML5, CSS3, Javascript, Web design, 웹디자인"
+    />
+    <meta name="description" content="멋진 웹서비스를 구현합니다." />
+    <meta name="author" content="Byoungcheon Lee, 이병천" />
+    <title>웹프로그래밍 | 강의자료</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">웹</span>프로그래밍</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="student.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="card">
+        <img src="./img/profile.png" alt="John" style="width: 100%" />
+        <h1>홍승현</h1>
+        <p class="title">91813298</p>
+        <p class="title">중부대학교 정보보호학과</p>
+        <p class="title">Back developer</p>
+        <a href="https://github.com/honk0128"
+          ><i class="fa fa-github fa-3x"></i
+        ></a>
+        <a href="https://www.instagram.com/seunghyeon8370/"
+          ><i class="fa fa-instagram fa-3x"></i
+        ></a>
+        <p>
+          <button
+            type="button"
+            onclick="location.href='https://portfolio-honk0128.vercel.app/'"
+          >
+            개인 포트폴리오 페이지
+          </button>
+        </p>
+      </div>
+      <div class="container">
+        <form action="action_page.php">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2023, 중부대학교 정보보호학과 91813298 홍승현</p>
+    </footer>
+  </body>
+</html>
